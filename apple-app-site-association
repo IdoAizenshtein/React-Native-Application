@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "6H7SGDMT78.com.biziboxapp",
+        "paths": ["NOT /signup/personal-data", "*"  ]
+      },
+      {
+        "appID": "6H7SGDMT78.com.biziboxapp.dev",
+        "paths": ["NOT /signup/personal-data", "*"  ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "com.biziboxapp",
+      "com.biziboxapp.dev"
+    ]
+  }
+}
+
+
+
+

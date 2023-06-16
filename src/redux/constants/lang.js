@@ -1,0 +1,1 @@
+export const SET_LANG_DIRECTION = 'SET_LANG_DIRECTION'

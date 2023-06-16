@@ -1,0 +1,917 @@
+{
+  "common": {
+    "settings": "הגדרות",
+    "recommendation": "המלצה לתשלום",
+    "label": {
+      "logout": "יציאה",
+      "login": "התחברות",
+      "email": "כתובת מייל",
+      "password": "סיסמא",
+      "submit": "שלח",
+      "newPassword": "סיסמה חדשה",
+      "enterPasswordAgain": "סיסמה בשנית"
+    },
+    "select": "בחירה",
+    "changeFilter": "שנו את הסינון",
+    "noFilterFound": "לא נמצאו תנועות לסינון המבוקש",
+    "add": "הוספה",
+    "transactionSum": "סכום העסקה",
+    "chargedOn": "חויב בתאריך",
+    "cancel": "ביטול",
+    "apply": "שמירה",
+    "tryAgain": "נסו שוב",
+    "recommended": "מומלץ!",
+    "closing": "סגירה",
+    "update": "עדכון",
+    "loading": "טעינה"
+  },
+  "login": {
+    "resetPassword": "איפוס סיסמא",
+    "forgotPassword": "שכחתי סיסמה",
+    "attemptsLeft": "נותרו ניסיונות",
+    "resendSms": "שלח שוב SMS",
+    "backToLogin": "חזרה למסך כניסה",
+    "cantProceedResetPass": "לא ניתן לשחזר סיסמה למערכת ביזיבוקס למייל זה",
+    "contactSupportTeam": "אנא פנו למנהל מערכת לאיפוס סיסמה או פתחו בקשת איפוס בכפתור מטה",
+    "otp": "OTP",
+    "label": {
+      "phone": "טלפון",
+      "code": "קוד",
+      "continue": "המשך",
+      "enterNewPassword": "הכנס סיסמה חדשה",
+      "confirmNewPassword": "אישור סיסמא חדשה"
+    },
+    "loginTitle": "כניסה למערכת"
+  },
+  "mainMenu": {
+    "help": "עזרה",
+    "overview": "סקירה כללית",
+    "financialManagement": "ניהול פיננסי",
+    "bankAccount": "חשבונות בנק",
+    "creditCard": "כרטיסי אשראי",
+    "checks": "צ'קים",
+    "slika": "חשבונות סליקה",
+    "mutavim": "מוטבים",
+    "cashFlow": "תזרים מזומנים",
+    "daily": "תזרים יומי",
+    "monthly": "תזרים חודשי",
+    "bankMatch": "התאמות בנקים",
+    "cyclicTrans": "תנועות קבועות",
+    "budget": "תקציב",
+    "documentManagement": "ניהול מסמכים",
+    "uploadingDocuments": "שליחת מסמכים",
+    "archives": "ארכיון",
+    "GOT_ABSORBED": "נקלטו",
+    "WAITING_ABSORBED": "ממתינים לקליטה"
+  },
+  "bankAccount": {
+    "choiceAccount": "בחרו חשבון",
+    "allAccounts": "כל החשבונות",
+    "allSelectedAccounts": "כל החשבונות הנבחרים",
+    "multiSelection": "בחירה מרובה",
+    "notUpdated": "לא מעודכן",
+    "filter": "סנן",
+    "filterBankAccounts": "חשבונות בנק",
+    "noDataFound": "לא נמצאו נתונים",
+    "search": "הקלידו טקסט לחיפוש",
+    "credit": "זכות",
+    "creditLimit": "מסגרת אשראי",
+    "debit": "חובה",
+    "all": "יתרה",
+    "totalBalance": "סה\"כ יתרה להיום בבוקר",
+    "noTransactions": "לא קיימות תנועות ביום זה",
+    "reference": "אסמכתא:",
+    "amount": "סכום",
+    "bank": "בנק",
+    "invoice": "חשבון",
+    "checkNumber": "מספר צ’ק",
+    "deposit": "ת. הפקדה",
+    "note": "הערה",
+    "nameOfBeneficiary": "שם המוטב",
+    "nameOfTransferor": "שם המוטב",
+    "noScanFound": "לא נמצאה סריקה עבור צ'ק זה",
+    "notFinal": "לא סופי",
+    "accountExceeded": "החשבון בחריגה",
+    "accountsNotUpdates": " נתונים לא מעודכנים עבור {{count}} חשבונות",
+    "accountsExceeded": "{{count}} חשבונות בחריגה",
+    "specificAccountExceeded": "חשבון {{accountNickname}} בחריגה",
+    "specificAccountNotUpdate": "לחשבון {{accountNickname}}",
+    "forDetails": "לפרטים",
+    "notUpdates": "הנתונים לא מעודכנים",
+    "lastUpdatedXDaysAgo": "עדכון אחרון לפני {{days}} ימים",
+    "lastUpdatedYesterday": "עדכון אחרון אתמול",
+    "calendar": "תאריכים",
+    "setDateRange": "הגדרת טווח תאריכים",
+    "lastYear": "שנה אחורה",
+    "lastSixMonths": "חצי שנה אחרונה",
+    "lastThreeMonths": "3 חודשים אחרונים",
+    "lastMonth": " חודש אחרון",
+    "lastTwoMonthsDays": "60 ימים אחרונים",
+    "lastThreeMonthsDays": "90 ימים אחרונים",
+    "lastMonthDays": "מתחילת החודש",
+    "last30Days": "30 הימים האחרונים",
+    "last60Days": "60 הימים האחרונים",
+    "beginningOfTheMonth": "מתחילת החודש",
+    "monthEarlier": "חודש קודם",
+    "until": "עד תאריך",
+    "from": "מתאריך",
+    "aggregatedView": "הצגת סיכומים",
+    "pleaseSelectAnAccountToViewData": "אנא בחרו חשבון להצגת נתונים",
+    "paymentDescTypes": {
+      "DirectDebit": "הרשאה לחיוב חשבון",
+      "Checks": "צ'ק",
+      "Slika": "סליקת אשראי",
+      "Bankfees": "עמלה",
+      "credit": "כרטיס אשראי",
+      "Loans": "הלוואה",
+      "Deposits": "פיקדון",
+      "cash": "מזומן",
+      "Other": "אחר",
+      "BankTransfer": "העברה בנקאית"
+    },
+    "selectAccount": "בחרו חשבון",
+    "selectCategory": "בחירת קטגוריה",
+    "categoryName": "שם הקטגוריה",
+    "addNewCategory": "הוספת קטגוריה חדשה",
+    "aggregated": "מרוכז",
+    "detailed": "מפורט",
+    "noBalanceInformationFound": "לא נמצאו יתרות"
+  },
+  "calendar": {
+    "today": "היום",
+    "yesterday": "אתמול",
+    "tomorrow": "מָחָר"
+  },
+  "creditCards": {
+    "allSelectedCards": "כל הכרטיסים",
+    "multipleSelected": "בחירה מרובה",
+    "selectAllCards": "בחרו את כל הכרטיסים",
+    "billingDate": "תאריך חיוב",
+    "notReceived": "לא התקבל",
+    "addCard": "הוספת כרטיס",
+    "submitUpdateCreditLimit": "עידכון",
+    "notExistCards": "לא נמצאו כרטיסי אשראי המקושרים למערכת",
+    "updateCreditLimit": "עדכן",
+    "insertAmount": "הזינו סכום",
+    "availableFrame": "מסגרת פנויה",
+    "totalFrame": "סה''כ מסגרת",
+    "perMonth": "בחודש",
+    "notFinal": "לא סופי",
+    "noTransactions": "ללא עסקאות",
+    "forexDeal": "עסקת מט''ח",
+    "paymentOutOf": "תשלום {{count}} מתוך {{total}}",
+    "notUpdates": "הנתונים לא מעודכנים",
+    "lastUpdatedXDaysAgo": "עדכון אחרון לפני {{days}} ימים",
+    "lastUpdatedYesterday": "עדכון אחרון אתמול",
+    "toTheCard": "לכרטיס {{creditCardNickname}}",
+    "xTicketsAreOutOfDate": "הנתונים לא מעודכנים עבור {{count}} כרטיסים",
+    "aCreditLineIsAboutToEnd": "מסגרת אשראי עומדת להסתיים",
+    "creditLineIsOver": "מסגרת אשראי הסתיימה",
+    "xCardsAboutToExpire": "מסגרת האשראי של {{count}} כרטיסים עומדת להסתיים",
+    "xCardsHaveEnded": "מסגרת האשראי של {{count}} כרטיסים הסתיימה",
+    "forDetails": "לפרטים",
+    "nonBank": "חוץ בנקאי",
+    "cardNameByType": {
+      "21": "ויזה כ.א.ל",
+      "22": "ישראכרט",
+      "23": "מסטרכארד",
+      "24": "לאומי קארד",
+      "25": "אמריקן אקספרס",
+      "26": "דיינרס"
+    }
+  },
+  "slika": {
+    "allSelectedCards": "כל הסולקים הנבחרים",
+    "allSelected": "כל הסולקים",
+    "cardsCount": "סה''כ",
+    "multipleSelected": "בחירה מרובה",
+    "futureBalance": "סה\"כ יתרה עתידית",
+    "expectedPercent": "אחוז מהצפי לתזרים",
+    "regularPaymentsTotal": "עסקאות רגילות",
+    "paymentsTotal": "עסקאות בתשלומים",
+    "noSolekChosen": "בחרו סולק",
+    "noAccountsNotification": "לא נמצאו חשבונות סליקה המקושרים למערכת",
+    "noAccountsButtonText": "הוספת חשבון",
+    "noCardSelectedNotification": "לא נמצאו תנועות לסינון המבוקש",
+    "noCardSelectedButtonText": "שנו את הסינון",
+    "noCardsNotification": " אנא בחרו חשבון סליקה להצגת נתונים",
+    "noCardsButtonText": "בחרו סולק",
+    "notUpdates": "הנתונים לא מעודכנים",
+    "lastUpdatedXDaysAgo": "עדכון אחרון לפני {{days}} ימים",
+    "lastUpdatedYesterday": "עדכון אחרון אתמול",
+    "toTheCard": "לסולק {{cardNickname}}",
+    "xTicketsAreOutOfDate": "נתונים לא מעודכנים עבור {{count}} סולקים",
+    "cardNameByType": {
+      "91": "יציל פיננסים",
+      "82": "ישראכארד",
+      "90": "גמא",
+      "80": "לאומיקארד",
+      "81": "ויזה",
+      "89": "צמרת מימונים"
+    }
+  },
+  "cashFlow": {
+    "expectedIncome": "הכנסה צפויה",
+    "expectedExpense": "הוצאה צפויה",
+    "expectedBalance": "יתרה צפויה",
+    "tillEndOfThisMonth": "עד סוף החודש הקרוב",
+    "tillEndOfNextMonth": "עד סוף החודש הבא",
+    "nextSixtyDays": "60 הימים הקרובים",
+    "nextNinetyDays": "90 הימים הקרובים",
+    "nextThirtyDays": "30 הימים הקרובים"
+  },
+  "checks": {
+    "notRepaid": "טרם נפרעו"
+  },
+  "sumsTitles": {
+    "total": "סה\"כ",
+    "accountBalanceOne": "יתרה להיום בבוקר",
+    "BalanceInclud": "יתרה (כולל נגררות)",
+    "creditLimitOne": "מסגרת אשראי",
+    "accountBalance": "סה\"כ יתרות להיום בבוקר",
+    "creditLimit": "סה\"כ מסגרות אשראי",
+    "balanceUse": "סה\"כ יתרה זמינה",
+    "accountExceeded": "החשבון בחריגה",
+    "account": "חשבון",
+    "forAccount": "לחשבון",
+    "accounts": "חשבונות",
+    "exceeding": "בחריגה",
+    "forDetails": "לפרטים",
+    "accountsExceeded": "חשבונות בחריגה",
+    "forex": "מט\"ח",
+    "notUpdates": "הנתונים לא מעודכנים",
+    "lastUpdate": "עדכון אחרון",
+    "yesterday": "אתמול",
+    "before": "לפני",
+    "days": "ימים",
+    "dragged": "נגרר",
+    "updateData": "עדכן נתונים",
+    "lastUpdated": "עודכן לאחרונה",
+    "today": "היום",
+    "creditLine": "סה\"כ מסגרת",
+    "availableFrame": "מסגרת פנויה",
+    "billingDate": "תאריך חיוב",
+    "notReached": "לא התקבל",
+    "ofTheMonth": "בחודש",
+    "nonBank": "חוץ בנקאי",
+    "overallForPeriod": "סה\"כ לתקופה",
+    "notRepaid": "טרם נפרעו",
+    "notDeposited": "טרם הופקדו",
+    "depositedSafekeeping": "הופקדו למשמרת",
+    "repaid": "נפרעו",
+    "discount": "בניכיון",
+    "manuallyDeleted": "נמחקו ידנית",
+    "comeBack": "חזרו",
+    "futureMaturityDate": "מועד הפרעון עתידי",
+    "repaymentPassed": "מועד הפרעון עבר",
+    "notHonored": "לא כובדו",
+    "none": "ללא",
+    "notYetRepaid": "טרם נפרעו / לא הותאמו",
+    "care": "טפלו",
+    "cashFlowStatus": "מצב התזרים לחודש הקרוב",
+    "unexpectedDeviation": "לא צפויה חריגה",
+    "expectedDateExceeded": "צפויה חריגה מתאריך",
+    "expectedExceeded": "צפויה חריגה ל-",
+    "match": "להתאמה",
+    "tomorrow": "מחר",
+    "in": "עוד",
+    "accountOutdated": "חשבון לא מעודכן"
+  },
+  "paymentTypes": {
+    "DirectDebit": "הרשאה לחיוב חשבון",
+    "Checks": "צ'ק",
+    "Bankfees": "עמלה",
+    "credit": "כרטיס אשראי",
+    "Loans": "הלוואה",
+    "Deposits": "פקדון",
+    "cash": "מזומנים",
+    "Expected": "צפי",
+    "Nocategory": "ללא קטגוריה",
+    "Institutes": "מוסדות",
+    "BankTransfer": "העברה בנקאית",
+    "Bouncedcheck": "שיקים חוזרים",
+    "Slika": "סליקת אשראי",
+    "Other": "אחר",
+    "RECOMMENDATION": "תנועות מומלצות להוספה"
+  },
+  "weekDay": {
+    "sunday": "ראשון",
+    "monday": "שני",
+    "tuesday": "שלישי",
+    "wednesday": "רביעי",
+    "thursday": "חמישי",
+    "friday": "שישי",
+    "saturday": "שבת"
+  },
+  "weekDayShort": {
+    "sunday": "א",
+    "monday": "ב",
+    "tuesday": "ג",
+    "wednesday": "ד",
+    "thursday": "ה",
+    "friday": "ו",
+    "saturday": "ש"
+  },
+  "weekDayNumberShort": {
+    "1": "א",
+    "2": "ב",
+    "3": "ג",
+    "4": "ד",
+    "5": "ה",
+    "6": "ו",
+    "7": "ש"
+  },
+  "updateBy": {
+    "SYSTEM": "מערכת",
+    "USER": "משתמש"
+  },
+  "settings": {
+    "myAccount": "החשבון שלי",
+    "businessDetails": "פרטים",
+    "alerts": "התראות",
+    "bankAdjustments": "התאמות בנקים",
+    "users": "משתמשים",
+    "bankAccounts": "חשבונות בנק",
+    "creditCards": "כרטיסי אשראי",
+    "clearingAccounts": "חשבונות סליקה",
+    "paymentsToBizibox": "תשלומים ל- bizibox",
+    "settings": "הגדרות",
+    "clearingAccount": {
+      "clearingAccounts": "חברת הסליקה"
+    },
+    "accountAssociation": "שיוך לחשבון",
+    "bankAccountsTab": {
+      "companies": "חברות",
+      "viewDeletedAccounts": "הצג חשבונות שנמחקו",
+      "viewDeletedCards": "הצג כרטיסים שנמחקו",
+      "lastUpdate": "טעינה אחרונה",
+      "creditCardsNum": "{{creditCardsNum}} כרטיסי אשראי",
+      "usersCount": "{{count}} משתמשים",
+      "branchNumber": "סניף {{number}}",
+      "accountRecovery": "שחזור חשבון",
+      "solekRecovery": "שחזור סולק",
+      "cardRecovery": "שחזור כרטיס",
+      "bankAccountRecovery": "שחזור חשבון בנק",
+      "solekAccountRecovery": "שחזור חשבון סליקה",
+      "cardAccountRecovery": "שחזור כרטיס אשראי",
+      "recoverAccountName": "האם לשחזר את החשבון {{accountName}}?",
+      "recoverCardName": "האם לשחזר את הכרטיס {{accountName}}?",
+      "recoverSolekName": "האם לשחזר את חשבון הסליקה {{accountName}}?",
+      "recoverSolekDesc": "הפעולה תחזיר את הנתונים ההיסטוריים הקיימים עבור החשבון, ללא נתונים חדשים.",
+      "recoverCardDesc": "הפעולה תחזיר את הנתונים ההיסטוריים הקיימים עבור הכרטיס, ללא נתונים חדשים.",
+      "recoverAccountDesc": "הפעולה תחזיר את הנתונים ההיסטוריים הקיימים עבור החשבון, כולל כרטיסי אשראי וחשבונות סליקה ,ללא נתונים חדשים.",
+      "deletingBankAccount": "מחיקת חשבון בנק",
+      "deletingSolekAccount": "מחיקת חשבון סליקה",
+      "deletingCardAccount": "מחיקת כרטיס אשראי",
+      "deletingAccount": "מחיקת החשבון",
+      "deleteAccountName": "האם למחוק את חשבון הבנק {{tokenName}}?",
+      "deleteCardtName": "האם למחוק את כרטיס האשראי {{tokenName}}?",
+      "deleteAccountDesc": "שימו לב: מחיקת החשבון תמחוק את כל כרטיסי האשראי וחשבונות הסליקה המקושרים אליו.",
+      "editAccountName": "עריכת שם החשבון",
+      "selectUsers": "בחירת משתמשים",
+      "selectLeadingAccount": "בחירת חשבון מוביל",
+      "addBankAccount": "הוספת חשבון בנק",
+      "bankName": "שם הבנק",
+      "experienceNumOfNum": "ניסיון {{count}} מתוך {{total}}",
+      "enterLogin": "הזינו פרטי כניסה",
+      "pleaseEnterDataFromBank": "אנא הזינו את הפרטים כפי שמעודכנים באתר הבנק",
+      "failedToConnectToBank": "ההתחברות לבנק נכשלה",
+      "failedToConnectToBankDesc": "מאחר והפרטים שהוזנו לא תואמים לפרטי הכניסה לבנק. אנא וודאו שהסיסמה עדכנית ושאין טעויות הקלדה. שימו לב, נותרו {{num}} ניסיונות לפני חסימת החשבון",
+      "excellent": "מצויין!",
+      "excellentDesc": "הצלחנו להתחבר והמערכת מושכת נתונים, בדר”כ זה לוקח 10 - 5 דקות. נעדכן בפעמון ההתראות כאשר נסיים לסדר את הנתונים במערכת.",
+      "login": "כניסה למערכת",
+      "accountHasBlocked": "נעשו 3 ניסיונות כניסה עם פרטים שגויים וחשבונכם נחסם.",
+      "accountHasBlockedDesc": "שחררו את החסימה לפי הוראות הבנק והזינו את פרטי הזיהוי החדשים",
+      "goToBankSite": "לאתר הבנק",
+      "unblockAccountIsBlocked": "שיחרור סיסמה לחשבון {{tokenName}}",
+      "unblockAccount": "עדכון סיסמה לחשבון {{tokenName}}",
+      "updateAccount": "עדכון פרטים לחשבון {{tokenName}}",
+      "unblockCard": "עדכון פרטי זיהוי {{tokenName}}",
+      "updateCard": "עדכון פרטים לכרטיס {{tokenName}}",
+      "": "שחררו את חסימת החשבון לפי ההוראות באתר הבנק והזינו את פרטי הזיהוי החדשים",
+      "updateTokenPassword": "צרו סיסמה חדשה באתר הבנק והזינו את הסיסמה העדכנית",
+      "updateTokenCredentials": "שחררו את חסימת החשבון לפי ההוראות באתר הבנק והזינו את פרטי הזיהוי החדשים",
+      "updateTokenPasswordPtrn": "צרו סיסמה חדשה ב אתר הבנק והזינו את הסיסמה העדכנית",
+      "updateTokenCredentialsPtrn": "שחררו את חסימת החשבון לפי ההוראות ב אתר הבנק והזינו את פרטי הזיהוי החדשים",
+      "passwordsAreNotBeSame": " הסיסמאות לא זהות, אנא בדקו שוב",
+      "status": {
+        "VALID": "פרטי הזיהוי תקינים",
+        "VALIDPOALIMBAASAKIM": "פרטי הזיהוי תקינים",
+        "INVALID_PASSWORD": "סיסמה שגויה",
+        "PASSWORD_EXPIRED": "סיסמה שגויה",
+        "INVALIDPASSORDANDACCESS": "סיסמה שגויה",
+        "BANK_TRANS_LOAD": "מושך תנועות עו\"ש",
+        "CREDIT_CARD_LOAD": "מושך תנועות אשראי",
+        "CHECKS_LOAD": "מושך שיקים עתידיים",
+        "DEPOSIT_LOAD": "מושך פקדונות",
+        "LOAN_LOAD": "מושך הלוואות",
+        "STANDING_ORDERS_LOAD": "מושך הרשאות לחיוב",
+        "FOREIGN_TRANS_LOAD": "מושך עו\"ש מט\"ח",
+        "BLOCKED": "חשבון חסום",
+        "TECHNICAL_PROBLEM": "התעוררה תקלה טכנית. אנחנו עובדים על פתרון",
+        "PASSWORD_ABOUT_TO_EXPIRED": "הסיסמה עומדת לפוג",
+        "IN_PROGRESS": "מאמת פרטי זיהוי",
+        "NEW": "מאמת פרטי זיהוי",
+        "OTP_REQUIRED": "נדרש קוד SMS",
+        "MARCOD_REQUIRED": "נדרש קוד מרכוד",
+        "DISCOD_REQUIRED": "נדרש קוד דיסקוד",
+        "INVALID_PASSWORD_AND_ACCESS": "",
+        "AGREEMENT_REQUIRED": "נדרש אישור הסכם שירות",
+        "SUSPENDED": "החשבון מוקפא לבקשתכם",
+        "ALMOST_DONE": "כבר מסיימים..."
+      }
+    },
+    "creditCardsTab": {
+      "creditCards": "כרטיסי אשראי",
+      "creditCard": "חברת האשראי",
+      "updateCreditLimitManually": "עדכן מסגרת ידנית",
+      "lastUpdate": "טעינה אחרונה",
+      "notUpdated": "לא מעודכן",
+      "editCreditCardName": "עריכת שם הכרטיס",
+      "deleteCard": "מחיקת הכרטיס",
+      "changeCardAccDesc": "לאחר ההחלפה, ההיסטוריה של הכרטיס וכל התנועות העתידיות שלו יהיו זמינות לצפייה תחת חשבון הבנק שהחלפתם אליו.",
+      "changeCardAcc": "האם ברצונכם להחליף את חשבון הבנק אליו מקושר הכרטיס ל{{name}}?",
+      "deleteAccountDesc": "שימו לב: בלחיצה על ׳מחיקת הכרטיס׳ לא נמשוך יותר נתונים לכרטיס זה. היסטוריית הנתונים של הכרטיס לא תוצג יותר במסכי המערכת."
+    },
+    "slikaTab": {
+      "lastUpdate": "טעינה אחרונה",
+      "notUpdated": "לא מעודכן",
+      "accountNumber": "מספר חשבון",
+      "editSlika": "עריכת שם הסולק",
+      "account": "חשבון בנק",
+      "clearingAccounts": "חשבונות סליקה",
+      "deleteSlika": "מחיקת הסולק",
+      "changeSlikaAccDesc": "לאחר ההחלפה, ההיסטוריה של הסולק וכל התנועות העתידיות שלו יהיו זמינות לצפייה תחת חשבון הבנק שהחלפתם אליו.",
+      "changeSlikaAcc": "האם ברצונכם להחליף את חשבון הבנק אליו מקושר הסולק ל{{name}}?",
+      "deleteSlikaName": "האם למחוק את חשבון הסליקה {{tokenName}}?",
+      "deleteSlikaDesc": "שימו לב: בלחיצה על ‘מחיקת הסולק’ לא נמשוך יותר נתונים לחשבון זה. היסטורית הנתונים של החשבון לא תוצג יותר במסכי המערכת."
+    }
+  },
+  "bankName": {
+    "4": "יהב",
+    "9": "בנק הדואר",
+    "10": "לאומי",
+    "11": "דיסקונט",
+    "12": "הפועלים",
+    "13": "איגוד",
+    "14": "אוצר החייל",
+    "17": "מרכנתיל דיסקונט",
+    "20": "מזרחי טפחות",
+    "31": "הבינלאומי הראשון",
+    "46": "מסד",
+    "52": "פאג\"י",
+    "54": "בנק ירושלים",
+    "68": "דקסיה",
+    "126": "יובנק",
+    "122": "פועלים לעסקים",
+    "157": "מרכנתיל עסקים פלוס",
+    "158": "דיסקונט עסקים פלוס"
+  },
+  "creditCardsName": {
+    "21": "ויזה כ.א.ל",
+    "22": "ישראכרט",
+    "23": "מסטרכארד",
+    "24": "לאומי קארד",
+    "25": "אמריקן אקספרס",
+    "26": "דיינרס"
+  },
+  "clearingAgenciesName": {
+    "80": "לאומי קארד",
+    "81": "ויזה כ.א.ל",
+    "82": "ישראכרט",
+    "83": "דיינרס",
+    "88": "מאסטרקארד",
+    "89": "צמרת מימונים",
+    "90": "גמא",
+    "91": "יציל פיננסים"
+  },
+  "billingCreditCard": {
+    "0": "כרטיס אשראי",
+    "1": "מסטרכרד",
+    "2": "ויזה",
+    "3": "מאסטרו",
+    "4": "אמקס",
+    "5": "ישראכרט",
+    "6": "JCB",
+    "7": "discover",
+    "8": "דיינרס"
+  },
+  "billingPayment": {
+    "1": "מזומן",
+    "cash": "מזומן",
+    "2": "צ'ק",
+    "cheque": "צ'ק",
+    "3": "כרטיס אשראי",
+    "creditCard": "כרטיס אשראי",
+    "4": "העברה בנקאית",
+    "wireTransfer": "העברה בנקאית",
+    "5": "הרשאה לחיוב חשבון",
+    "directDebit": "הרשאה לחיוב חשבון"
+  },
+  "foreignCredentials": {
+    "4": {
+      "username": {
+        "label": "שם משתמש",
+        "rule": "הקלידו 4-16 אותיות לועזיות וספרות בלבד"
+      },
+      "userId": {
+        "label": "תעודת זהות",
+        "rule": "הקלידו תעודת זהות בעלת 9 ספרות"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-16 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "9": {
+      "username": {
+        "label": "שם משתמש",
+        "rule": "הקלידו 5-10 אותיות לועזיות וספרות בלבד"
+      },
+      "userId": {
+        "label": "מספר זהות",
+        "rule": "הקלידו מספר זהות בעל 9 ספרות"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 8-15 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "10": {
+      "username": {
+        "label": "זיהוי משתמש",
+        "rule": "הקלידו 5-10 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-12 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "11": {
+      "userId": {
+        "label": "מספר זהות",
+        "rule": "הקלידו מספר זהות בעל 9 ספרות"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userCode": {
+        "label": "קוד מזהה",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "12": {
+      "username": {
+        "label": "קוד משתמש",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-16 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "13": {
+      "username": {
+        "label": "זיהוי משתמש",
+        "rule": "הקלידו 6-12 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-12 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "14": {
+      "username": {
+        "label": "קוד משתמש",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-8 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "17": {
+      "userId": {
+        "label": "מספר זהות",
+        "rule": "הקלידו מספר זהות בעל 9 ספרות"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userCode": {
+        "label": "קוד מזהה",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "20": {
+      "username": {
+        "label": "מספר משתמש",
+        "rule": "הקלידו מספר משתמש בעל 10 אותיות לועזיות וספרות"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו סיסמה בעלת 6-15 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "31": {
+      "username": {
+        "label": "קוד משתמש",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-8 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "46": {
+      "username": {
+        "label": "קוד משתמש",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-8 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "52": {
+      "username": {
+        "label": "קוד משתמש",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "54": {
+      "username": {
+        "label": "שם משתמש",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "122": {
+      "name": "פועלים לעסקים",
+      "message": "עבור חשבונות פועלים לעסקים יש צורך בהרשאת \"לצפייה בלבד\"\nהמערכת מושכת נתונים על סמך הרשאה \"לצפייה בלבד\"\nיש להצטייד מראש ב-\nפרטי כניסה של הבנק\nאישור בעל החשבון להקמת פרוטוקול\nפתחו לנו קריאת שירות ונחזור אליכם להקים את החשבון\n(פתיחת קריאת שירות נמצאת במסך עזרה)",
+      "username": {
+        "label": "קוד משתמש",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-16 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "126": {
+      "username": {
+        "label": "קוד משתמש",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-10 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "157": {
+      "name": "מרכנתיל עסקים פלוס",
+      "description": "קוד המרכוד",
+      "userId": {
+        "label": "מספר זהות",
+        "rule": "הקלידו מספר זהות בעל 9 ספרות"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userCode": {
+        "label": "קוד מזהה",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "otpTypes": {
+        "constant": {
+          "label": "קוד התקנה קבוע",
+          "description": "הזנה חד-פעמית של קוד ההתקנה תאפשר משיכת נתונים אוטומטית באופן יומי ותחסוך הזנת קוד יומית לביצוע משיכה",
+          "info": "איפה למצוא את קוד ההתקנה?<br>בהצטרפות לשירות אפליקציית מרכוד קיבלתם מייל או SMS עם קוד התקנה ראשוני בן 16 אותיות באנגלית וספרות. אם אין ברשותכם את הקוד, תוכלו לבקש אותו שוב מהבנק ולעדכן במערכת bizibox בכל זמן.",
+          "rule": "הקלידו 16 ספרות בלבד"
+        },
+        "application": {
+          "label": "אפליקציה / מפתח פיזי",
+          "description": "הזינו את קוד המרכוד רק אם נותרו 20 שניות לפחות לפני שיתחלף",
+          "info": "מרכוד הוא קוד מתחלף בן 6 ספרות שנחוץ למשיכת נתונים מהבנק. ניתן לקבל את הקוד באחת מהדרכים הבאות: אפליקציה במחשב או בנייד מרכוד פיזי בהודעת SMS מאתר הבנק",
+          "rule": "הקלידו 6 ספרות בלבד"
+        },
+        "message": {
+          "label": "הודעה מאתר הבנק",
+          "description": "לאחר הלחיצה יישלח קוד חד-פעמי לנייד המקושר לחשבון. אנא וודאו כי הנייד המקושר זמין. לאחר קבלת ההודעה יהיו כ-30 שניות בלבד להזנת הקוד.",
+          "rule": "הקלידו 8 אותיות לועזיות וספרות בלבד"
+        }
+      }
+    },
+    "158": {
+      "name": "דיסקונט עסקים פלוס",
+      "description": "קוד הדיסקוד",
+      "username": {
+        "label": "מספר זהות",
+        "rule": "הקלידו מספר זהות בעל 9 ספרות"
+      },
+      "userId": {
+        "label": "מספר זהות",
+        "rule": "הקלידו מספר זהות בעל 9 ספרות"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "userCode": {
+        "label": "קוד מזהה",
+        "rule": "הקלידו 6-14 אותיות לועזיות וספרות בלבד"
+      },
+      "otpTypes": {
+        "constant": {
+          "label": "קוד התקנה קבוע",
+          "description": "הזנה חד-פעמית של קוד ההתקנה תאפשר משיכת נתונים אוטומטית באופן יומי ותחסוך הזנת קוד יומית לביצוע משיכה",
+          "info": "איפה למצוא את קוד ההתקנה? בהצטרפות לשירות אפליקציית דיסקוד קיבלתם מייל או SMS עם קוד התקנה ראשוני בן 16 אותיות באנגלית וספרות. אם אין ברשותכם את הקוד, תוכלו לבקש אותו שוב מהבנק ולעדכן במערכת bizibox בכל זמן.",
+          "rule": "הקלידו 16 ספרות בלבד"
+        },
+        "application": {
+          "label": "אפליקציה / מפתח פיזי",
+          "description": "הזינו את קוד הדיסקוד רק אם נותרו 20 שניות לפחות לפני שיתחלף",
+          "info": "דיסקוד הוא קוד מתחלף בן 6 ספרות שנחוץ למשיכת נתונים מהבנק. ניתן לקבל את הקוד באחת מהדרכים הבאות: אפליקציה במחשב או בנייד דיסקוד פיזי בהודעת SMS מאתר הבנק ",
+          "rule": "הקלידו 6 ספרות בלבד"
+        },
+        "message": {
+          "label": "הודעה מאתר הבנק",
+          "description": "לאחר הלחיצה יישלח קוד חד-פעמי לנייד המקושר לחשבון. אנא וודאו כי הנייד המקושר זמין. לאחר קבלת ההודעה יהיו כ-30 שניות בלבד להזנת הקוד.",
+          "rule": "הקלידו 8 אותיות לועזיות וספרות בלבד"
+        }
+      }
+    },
+    "21": {
+      "username": {
+        "label": "שם משתמש",
+        "rule": "הקלידו 4-10 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-12 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "22": {
+      "username": {
+        "label": "מספר זהות",
+        "rule": "הקלידו מספר זהות בעל 9 ספרות"
+      },
+      "userId": {
+        "label": "מזהה אשראי",
+        "rule": "הקלידו מזהה אשראי בעל 6 ספרות",
+        "placeHolder": "6 ספרות אחרונות של כרטיס האשראי"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-20 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "23": {
+      "username": {
+        "label": "מספר זהות",
+        "rule": "הקלידו מספר זהות בעל 9 ספרות"
+      },
+      "userId": {
+        "label": "מזהה אשראי",
+        "rule": "הקלידו מזהה אשראי בעל 6 ספרות",
+        "placeHolder": "6 ספרות אחרונות של כרטיס האשראי"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-20 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "24": {
+      "username": {
+        "label": "שם משתמש",
+        "rule": "הקלידו 5-20 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 8-14 אותיות לועזיות ,ספרות וסימנים בלבד"
+      }
+    },
+    "25": {
+      "username": {
+        "label": "מספר זהות",
+        "rule": "הקלידו מספר זהות בעל 9 ספרות"
+      },
+      "userId": {
+        "label": "מזהה אשראי",
+        "rule": "הקלידו מזהה אשראי בעל 6 ספרות",
+        "placeHolder": "6 ספרות אחרונות של כרטיס האשראי"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-20 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "80": {
+      "username": {
+        "label": "שם משתמש",
+        "rule": "הקלידו 5-20 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-14 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "81": {
+      "username": {
+        "label": "שם משתמש",
+        "rule": "הקלידו 8 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-10 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "82": {
+      "username": {
+        "label": "שם משתמש",
+        "rule": "הקלידו 6-18 אותיות לועזיות וספרות בלבד"
+      },
+      "userId": {
+        "label": "מספר חשבון בנק",
+        "rule": "הקלידו 3-8 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-20 ספרות בלבד"
+      }
+    },
+    "89": {
+      "username": {
+        "label": "שם משתמש",
+        "rule": "הקלידו 4-16 אותיות לועזיות וספרות בלבד"
+      },
+      "userId": {
+        "label": "קוד לקוח",
+        "rule": "הקלידו 2-20 ספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-16 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "90": {
+      "username": {
+        "label": "קוד משתמש",
+        "rule": "הקלידו 4-20 אותיות לועזיות וספרות בלבד"
+      },
+      "userId": {
+        "label": "קוד לקוח",
+        "rule": "הקלידו 4-6 ספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-16 אותיות לועזיות וספרות בלבד"
+      }
+    },
+    "91": {
+      "username": {
+        "label": "שם משתמש",
+        "rule": "הקלידו 8 אותיות לועזיות וספרות בלבד"
+      },
+      "userPassword": {
+        "label": "סיסמה",
+        "rule": "הקלידו 2-10 ספרות בלבד"
+      }
+    }
+  },
+  "actions": {
+    "setCode": "הכנסת קוד",
+    "unBlock": "שחרור חסימה",
+    "updatePassword": "עדכון סיסמה",
+    "updateIdInfo": "עדכון פרטי זיהוי"
+  },
+  "screenHelp": {
+    "overview": "סקירה כללית",
+    "bankAccount": "חשבונות בנק",
+    "creditCard": "כרטיסי אשראי",
+    "checks": "צ'קים",
+    "slika": "חשבונות סליקה",
+    "cashflow": "תזרים מזומנים",
+    "bankmatch": "התאמות בנקים",
+    "fixedMovements": "תנועות קבועות",
+    "bookKeepingAnalyze": "ניתוח הנהלת חשבונות",
+    "profitAndLoss": "רווח והפסד",
+    "trialBalance": "מאזן בוחן",
+    "setting/bankaccounts": "הגדרות חשבונות בנק",
+    "setting/creditscard": "הגדרות כרטיסי אשראי",
+    "setting/slikaAccounts": "הגדרות סליקה",
+    "settings": "הגדרות",
+    "mutavim": "מוטבים",
+    "budget": "תקציב"
+  }
+}

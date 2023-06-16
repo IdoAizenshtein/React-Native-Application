@@ -1,0 +1,1 @@
+import {NativeModules, requireNativeComponent} from 'react-native'export const CameraRNManagerView = requireNativeComponent('CameraRNManager', null)export const CameraXViewRN = NativeModules.CameraXViewRN || {};

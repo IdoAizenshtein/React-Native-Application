@@ -1,0 +1,266 @@
+apply plugin: "com.android.application"
+apply plugin: 'com.google.gms.google-services'
+// apply plugin: 'kotlin-android'
+apply plugin: "com.facebook.react"
+
+
+def getExtOrDefault(name) {
+    return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties['Core_' + name]
+}
+import com.android.build.OutputFile
+
+react {
+    /* Folders */
+    //   The root of your project, i.e. where "package.json" lives. Default is '..'
+    // root = file("../")
+    //   The folder where the react-native NPM package is. Default is ../node_modules/react-native
+    // reactNativeDir = file("../node_modules/react-native")
+    //   The folder where the react-native Codegen package is. Default is ../node_modules/react-native-codegen
+    // codegenDir = file("../node_modules/react-native-codegen")
+    //   The cli.js file which is the React Native CLI entrypoint. Default is ../node_modules/react-native/cli.js
+    // cliFile = file("../node_modules/react-native/cli.js")
+    /* Variants */
+    //   The list of variants to that are debuggable. For those we're going to
+    //   skip the bundling of the JS bundle and the assets. By default is just 'debug'.
+    //   If you add flavors like lite, prod, etc. you'll have to list your debuggableVariants.
+    // debuggableVariants = ["liteDebug", "prodDebug"]
+    /* Bundling */
+    //   A list containing the node command and its flags. Default is just 'node'.
+    // nodeExecutableAndArgs = ["node"]
+    //
+    //   The command to run when bundling. By default is 'bundle'
+    // bundleCommand = "ram-bundle"
+    //
+    //   The path to the CLI configuration file. Default is empty.
+    // bundleConfig = file(../rn-cli.config.js)
+    //
+    //   The name of the generated asset file containing your JS bundle
+    // bundleAssetName = "MyApplication.android.bundle"
+    //
+    //   The entry file for bundle generation. Default is 'index.android.js' or 'index.js'
+    // entryFile = file("../js/MyApplication.android.js")
+    //
+    //   A list of extra flags to pass to the 'bundle' commands.
+    //   See https://github.com/react-native-community/cli/blob/main/docs/commands.md#bundle
+    // extraPackagerArgs = []
+    /* Hermes Commands */
+    //   The hermes compiler command to run. By default it is 'hermesc'
+    // hermesCommand = "$rootDir/my-custom-hermesc/bin/hermesc"
+    //
+    //   The list of flags to pass to the Hermes compiler. By default is "-O", "-output-source-map"
+    // hermesFlags = ["-O", "-output-source-map"]
+}
+
+/**
+ * Set this to true to create four separate APKs instead of one,
+ * one for each native architecture. This is useful if you don't
+ * use App Bundles (https://developer.android.com/guide/app-bundle/)
+ * and want to have separate APKs to upload to the Play Store.
+ */
+def enableSeparateBuildPerCPUArchitecture = false
+
+/**
+ * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
+ */
+def enableProguardInReleaseBuilds = false
+
+/**
+ * The preferred build flavor of JavaScriptCore (JSC)
+ *
+ * For example, to use the international variant, you can use:
+ * `def jscFlavor = 'org.webkit:android-jsc-intl:+'`
+ *
+ * The international variant includes ICU i18n library and necessary data
+ * allowing to use e.g. `Date.toLocaleString` and `String.localeCompare` that
+ * give correct results when using with locales other than en-US. Note that
+ * this variant is about 6MiB larger per architecture than default.
+ */
+def jscFlavor = 'org.webkit:android-jsc:+'
+
+/**
+ * Private function to get the list of Native Architectures you want to build.
+ * This reads the value from reactNativeArchitectures in your gradle.properties
+ * file and works together with the --active-arch-only flag of react-native run-android.
+ */
+def reactNativeArchitectures() {
+    def value = project.getProperties().get("reactNativeArchitectures")
+    return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
+}
+def isNewArchitectureEnabled() {
+    // To opt-in for the New Architecture, you can either:
+    // - Set `newArchEnabled` to true inside the `gradle.properties` file
+    // - Invoke gradle with `-newArchEnabled=true`
+    // - Set an environment variable `ORG_GRADLE_PROJECT_newArchEnabled=true`
+    return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
+}
+android {
+    ndkVersion rootProject.ext.ndkVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    def rawBuildNumber = System.getenv("BITRISE_BUILD_NUMBER") ?: "1"
+    def buildNumber = Integer.parseInt(rawBuildNumber)
+    def bitriseVersionName = System.getenv("BITRISE_GIT_TAG") ?: "1.1.5"
+//     kotlinOptions {
+//         jvmTarget = "1.8"
+//     }
+    namespace "com.biziboxapp"
+    defaultConfig {
+        applicationId "com.biziboxapp"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode buildNumber
+        versionName bitriseVersionName
+        missingDimensionStrategy 'react-native-camera', 'mlkit'
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        def runTasks = gradle.startParameter.taskNames
+        if (runTasks.toString().contains('assembleProdRelease') || runTasks.toString().contains('prodRelease')) {
+            println "Yes all"
+        }
+        buildConfigField("boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString())
+    }
+    splits {
+        abi {
+            reset()
+            enable gradle.startParameter.taskNames.toString().contains('assembleProdRelease')
+            universalApk false  // If true, also generate a universal APK
+            include(*reactNativeArchitectures())
+        }
+    }
+    signingConfigs {
+        release {
+            if (project.hasProperty('BIZIBOX_RELEASE_STORE_FILE')) {
+                storeFile file(BIZIBOX_RELEASE_STORE_FILE)
+                storePassword BIZIBOX_RELEASE_STORE_PASSWORD
+                keyAlias BIZIBOX_RELEASE_KEY_ALIAS
+                keyPassword BIZIBOX_RELEASE_KEY_PASSWORD
+            }
+        }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        prod {
+            dimension "version"
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId 'com.biziboxapp'
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.biziboxapp"
+            versionName bitriseVersionName
+        }
+        dev {
+            dimension "version"
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId 'com.biziboxapp.dev'
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.biziboxapp.dev"
+            versionName "${buildNumber}-dev"
+        }
+    }
+    buildTypes {
+        release {
+            // Caution! In production, you need to generate your own keystore file.
+            // see https://reactnative.dev/docs/signed-apk-android.
+            signingConfig signingConfigs.release
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+
+// applicationVariants are e.g. debug, release
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            // For each separate APK per architecture, set a unique version code as described here:
+            // https://developer.android.com/studio/build/configure-apk-splits.html
+            // Example: versionCode 1 will generate 1001 for armeabi-v7a, 1002 for x86, etc.
+            def versionCodes = ["armeabi-v7a": 1, "x86": 2, "arm64-v8a": 3, "x86_64": 4]
+            def abi = output.getFilter(OutputFile.ABI)
+            if (abi != null) {  // null for the universal-debug, universal-release variants
+                output.versionCodeOverride =
+                        defaultConfig.versionCode * 1000 + versionCodes.get(abi)
+            }
+
+        }
+    }
+}
+
+// required by react-native-background-upload until React Native supports okhttp >= okhttp 3.5
+// configurations.all { resolutionStrategy.force 'com.squareup.okhttp3:okhttp:3.4.1' }
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.squareup.okhttp3:okhttp:5.0.0-alpha.11'
+//         force 'com.facebook.react:react-native:0.71.3'
+    }
+}
+def kotlin_version = getExtOrDefault('kotlinVersion')
+dependencies {
+   constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+            because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+            because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+        }
+    }
+    // The version of react-native is set by the React Native Gradle Plugin
+    implementation("com.facebook.react:react-android")
+    implementation project(':react-native-background-upload')
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
+    implementation project(path: ":react-native-interactable")
+    implementation project(':@react-native-camera-roll_camera-roll')
+//     implementation 'com.google.firebase:firebase-core:16.0.0'
+//     implementation 'com.google.firebase:firebase-analytics:17.5.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation "com.google.guava:guava:31.1-android"
+//     implementation(project(':react-native-device-info')){
+//             exclude group: 'com.google.firebase',
+//             module: 'firebase-iid'
+//      }
+    // If your app supports Android versions before Ice Cream Sandwich (API level 14)
+    implementation 'com.facebook.fresco:animated-base-support:1.3.0'
+    implementation 'com.facebook.fresco:fresco:2.6.0'
+        // For animated GIF support
+    implementation 'com.facebook.fresco:animated-gif:2.6.0'
+//     implementation project(':react-native-vector-icons')
+    implementation project(path: ':openCVLibrary3410')
+//     implementation "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}"
+    implementation platform("org.jetbrains.kotlin:kotlin-bom:${kotlin_version}")
+    implementation "androidx.exifinterface:exifinterface:1.3.6"
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:5.0.0-alpha.11"))
+    implementation("com.squareup.okhttp3:okhttp")              // No version!
+    implementation("com.squareup.okhttp3:okhttp-urlconnection") // No version!
+   // CameraX core library using the camera2 implementation
+    def camerax_version = "1.3.0-alpha04"
+    // The following line is optional, as the core library is included indirectly by camera-camera2
+    implementation("androidx.camera:camera-core:${camerax_version}")
+    implementation("androidx.camera:camera-camera2:${camerax_version}")
+    // If you want to additionally use the CameraX Lifecycle library
+    implementation("androidx.camera:camera-lifecycle:${camerax_version}")
+    // If you want to additionally use the CameraX View class
+    implementation("androidx.camera:camera-view:${camerax_version}")
+    // If you want to additionally add CameraX ML Kit Vision Integration
+    implementation("androidx.camera:camera-mlkit-vision:${camerax_version}")
+    // If you want to additionally use the CameraX Extensions library
+    implementation("androidx.camera:camera-extensions:${camerax_version}")
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
+    debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    }
+    debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}")
+    if (hermesEnabled.toBoolean()) {
+        implementation("com.facebook.react:hermes-android")
+    } else {
+        implementation jscFlavor
+    }
+}
+
+
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+repositories {
+    mavenCentral()
+}
+
+

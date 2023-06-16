@@ -1,0 +1,104 @@
+{
+  "project_info": {
+    "project_number": "265867596991",
+    "firebase_url": "https://bizibox-app.firebaseio.com",
+    "project_id": "bizibox-app",
+    "storage_bucket": "bizibox-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265867596991:android:7f1f0d4c55030c82",
+        "android_client_info": {
+          "package_name": "co.centroida.notifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265867596991-hr7thtr37cj9j9o3fac8gfon39d3slfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbv45sYtT9EQpyXEuU6rrUjvoZptq9ViU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265867596991:android:452ac99b86224584",
+        "android_client_info": {
+          "package_name": "com.bizibox.IFact"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265867596991-hr7thtr37cj9j9o3fac8gfon39d3slfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbv45sYtT9EQpyXEuU6rrUjvoZptq9ViU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265867596991:android:2e6c293b104cdfd2",
+        "android_client_info": {
+          "package_name": "com.biziboxapp.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265867596991-hr7thtr37cj9j9o3fac8gfon39d3slfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbv45sYtT9EQpyXEuU6rrUjvoZptq9ViU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
